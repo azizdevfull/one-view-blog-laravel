@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('{{ $user->name }} ning postlari') }}
+            {{ __(" $user->name ning postlari") }}
         </h2>
     </x-slot>
 
@@ -12,6 +12,7 @@
                     <ul>
                         @foreach ($posts as $post)
                             <li>{{ $post->title }}</li>
+                            <a href="{{ route('posts.show', $post->id) }}">Show</a>
                         @endforeach
                     </ul>
                 </div>

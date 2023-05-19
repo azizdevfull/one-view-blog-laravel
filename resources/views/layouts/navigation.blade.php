@@ -21,6 +21,12 @@
                         {{ __('Posts') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('users.show', Auth::user()->id)" :active="request()->routeIs('users.show')">
+                        {{ __('My Posts') }}
+                    </x-nav-link>
+                </div>
+            
             </div>
 
             <!-- Settings Dropdown -->
